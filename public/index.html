@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>DnD Character Creator</title>
+  <!-- Bootstrap CSS CDN  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+
+  <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Style to fix the issue of text extending past card length -->
+  <style>
+    .card-body a {
+      word-break: break-all;
+    }
+
+    .articleHeadline {
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Main Bootstrap Search -->
+  <div class="container">
+
+    <!-- Jumbotron for Title -->
+    <div class="jumbotron">
+      <h1 class="text-center heading1">
+        <strong>
+          <i class="fas fa-dragon"></i>  DnD Character Creator</strong>
+      </h1>
+    </div>
+
+    <!-- Row for Searching New York Times -->
+    <div class="row">
+      <div class="col-sm-12">
+        <br>
+        <!-- First card is for handling the search parameters -->
+        <div class="card">
+          <div class="card-header">
+            <strong>
+              <i class="fab fa-d-and-d"></i> Character Attributes</strong>
+          </div>
+          <div class="card-body">
+
+            <!-- Here we create an HTML Form for handling the inputs-->
+            <form role="form">
+
+              <!-- Here we create the text box for capturing the search term-->
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="character-name">
+              </div>
+
+              <!-- Here we capture the number of records that the user wants to retrieve  -->
+              <!-- <div class="form-group">
+                <label for="pwd">Number of Records to Retrieve:</label>
+                <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
+                  <option selected value="1">1</option>
+                  <!-- Setting the option for 5 as default -->
+                  <!-- <option value="5" selected>5</option>
+                  <option value="10">10</option>
+                </select>
+              </div> --> 
+
+              
+              <div class="form-group">
+                <label for="race">Race</label>
+                <input type="text" class="form-control" id="race">
+              </div>
+
+              <div class="form-group">
+                <label for="alignment">Alignment</label>
+                <input type="text" class="form-control" id="alignment">
+              </div>
+              <div class="form-group">
+                <label for="background">Background</label>
+                <input type="text" class="form-control" id="background">
+              </div>
+              <div class="form-group">
+                <label for="strength">Strength</label>
+                <input type="text" class="form-control" id="strength">
+              </div>
+              <div class="form-group">
+                <label for="dexterity">Dexterity</label>
+                <input type="text" class="form-control" id="dexterity">
+              </div>
+              <div class="form-group">
+                <label for="constitution">Constitution</label>
+                <input type="text" class="form-control" id="constitution">
+              </div>
+              <div class="form-group">
+                <label for="intelligence">intelligence</label>
+                <input type="text" class="form-control" id="intelligence">
+              </div>
+              <div class="form-group">
+                <label for="wisdom">Wisdom</label>
+                <input type="text" class="form-control" id="wisdom">
+              </div>
+              <div class="form-group">
+                <label for="charisma">Charisma</label>
+                <input type="text" class="form-control" id="charisma">
+              </div>
+              <div class="form-group">
+                <label for="passive-wisdom">Passive Wisdom (Perception)</label>
+                <input type="text" class="form-control" id="passive-wisdom">
+              </div>
+              <div class="form-group">
+                <label for=armor-class">Armor Class</label>
+                <input type="text" class="form-control" id="armor-class">
+              </div>
+              <div class="form-group">
+                <label for="initiative">Initiative</label>
+                <input type="text" class="form-control" id="initiative">
+              </div>
+              <div class="form-group">
+                <label for="speed">Speed</label>
+                <input type="text" class="form-control" id="speed">
+              </div>
+              
+              <!-- Here we have our final submit button -->
+              <div class="row">
+                <div class="col-md-12">
+              <button type="submit" class="btn btn-lg btn-block" id="create">
+                <i class="fas fa-plus-circle"></i> Create</button>
+              </div>
+            </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <!-- Footer Region -->
+    <div class="row">
+      <div class="col-sm-12">
+
+        <!-- Line Break followed by closing -->
+        <hr>
+        <h5 class="text-center">
+          <small><i class="fas fa-hat-wizard"></i>
+            <i class="fas fa-magic"></i>
+          </small>
+        </h5>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- jQuery JS -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+  <!-- Code to the JavaScript File -->
+  <script src="https://kit.fontawesome.com/0f441b8ac8.js" crossorigin="anonymous"></script>
+  <script src="./js/index.js"></script>
+
+</body>
+
+</html>
