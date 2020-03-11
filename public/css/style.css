@@ -1,4 +1,4 @@
-body {
+#bodychars {
   background-color: #17141b;
   font-family: 'Open Sans', sans-serif;
   color: white;
@@ -8,7 +8,7 @@ body {
   color: black;
 }
 
-.container {
+.containerchars {
   height: 800px;
   width: 100%;
   top: 60px;
@@ -18,7 +18,7 @@ body {
   display: flex;
 }
 
-.card {
+.cardchars {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,25 +35,25 @@ body {
   left: 0px;
 }
 
-.card:not(:first-child) {
+.cardchars:not(:first-child) {
   margin-left: -50px;
 }
 
-.card:hover {
+.cardchars:hover {
   -webkit-transform: translateY(-25px);
           transform: translateY(-25px);
   -webkit-transition: 0.4s ease-out;
   transition: 0.4s ease-out;
 }
 
-.card:hover ~ .card {
+.cardchars:hover ~ .cardchars {
   position: relative;
   left: 50px;
   -webkit-transition: 0.4s ease-out;
   transition: 0.4s ease-out;
 }
 
-.cards {
+.cardcharss {
   margin-top: 15%;
 }
 
@@ -70,7 +70,7 @@ svg {
   stroke-width: 2px;
 }
 
-.card:hover .stroke {
+.cardchars:hover .stroke {
   stroke-dashoffset: 100;
   -webkit-transition: 0.6s ease-out;
   transition: 0.6s ease-out;

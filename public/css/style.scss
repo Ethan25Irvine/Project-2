@@ -1,4 +1,4 @@
-body {
+#bodychars {
 	background-color: #17141b;
 	font-family: 'Open Sans', sans-serif;
 	color: white;
@@ -7,7 +7,7 @@ body {
 	color: black;
 }
 
-.container {
+.containerchars {
 	height: 800px;
 	width: 100%;
 	top: 60px;
@@ -15,7 +15,7 @@ body {
 	display: flex;
 }
 
-.card {
+.cardchars {
 	display: flex;
 	height: 500px;
 	width: 300px;
@@ -28,21 +28,21 @@ body {
 	left: 0px;
 }
 
-.card:not(:first-child) {
+.cardchars:not(:first-child) {
 	margin-left: -50px;
 }
 
-.card:hover {
+.cardchars:hover {
 	transform: translateY(-25px);
 	transition: 0.4s ease-out;
 }
 
-.card:hover ~ .card {
+.cardchars:hover ~ .cardchars {
 	position: relative;
 	left: 50px;
 	transition: 0.4s ease-out;
 }
-.cards {
+.cardcharss {
 	margin-top: 15%;
 }
 
@@ -59,7 +59,7 @@ svg {
 	stroke-width: 2px;
 }
 
-.card:hover .stroke {
+.cardchars:hover .stroke {
 	stroke-dashoffset: 100;
 	transition: 0.6s ease-out;
 }
