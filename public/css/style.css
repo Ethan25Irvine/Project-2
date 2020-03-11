@@ -1,6 +1,78 @@
-.heading1 {
-    color: white;
+body {
+  background-color: #17141b;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
 }
-.jumbotron {
-    background-color: #C6362A;
+
+.modal {
+  color: black;
 }
+
+.container {
+  height: 800px;
+  width: 100%;
+  top: 60px;
+  left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 500px;
+  width: 300px;
+  background-color: #17141d;
+  border-radius: 10px;
+  -webkit-box-shadow: -1rem 0 3rem #000;
+          box-shadow: -1rem 0 3rem #000;
+  /*   margin-left: -50px; */
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.card:not(:first-child) {
+  margin-left: -50px;
+}
+
+.card:hover {
+  -webkit-transform: translateY(-25px);
+          transform: translateY(-25px);
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+.cards {
+  margin-top: 15%;
+}
+
+.title {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+svg {
+  fill: #17141d;
+  stroke-width: 2px;
+}
+
+.card:hover .stroke {
+  stroke-dashoffset: 100;
+  -webkit-transition: 0.6s ease-out;
+  transition: 0.6s ease-out;
+}
+/*# sourceMappingURL=style.css.map */
