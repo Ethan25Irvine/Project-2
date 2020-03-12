@@ -1,6 +1,17 @@
 .heading1 {
     color: white;
 }
-.jumbotron {
+/* .jumbotron {
     background-color: #C6362A;
+} */
+
+.button{
+    height: 10px;
 }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+  }

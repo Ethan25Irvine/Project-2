@@ -37,20 +37,20 @@ module.exports = function(sequelize, DataTypes) {
             len: [1]
             }
         },
-        XP: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
-        Level: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
+        // XP: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     validate: {
+        //         len: [1]
+        //     }
+        // },
+        // Level: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     validate: {
+        //         len: [1]
+        //     }
+        // },
         // Character Stats
         // ####################################
         Strength: {
@@ -127,22 +127,22 @@ module.exports = function(sequelize, DataTypes) {
         },
         // Death Saves
         // ##########################
-        Successes:{
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            defaultValue: 0,
-            validate: {
-                len: [1]
-            }
-        },
-        Failures:{
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            defaultValue: 0,
-            validate: {
-                len: [1]
-            }
-        },
+        // Successes:{
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     defaultValue: 0,
+        //     validate: {
+        //         len: [1]
+        //     }
+        // },
+        // Failures:{
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     defaultValue: 0,
+        //     validate: {
+        //         len: [1]
+        //     }
+        // },
         // Ability Saving Throws
         // #################################
         StrengthST: {
