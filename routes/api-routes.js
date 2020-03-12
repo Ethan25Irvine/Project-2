@@ -33,7 +33,7 @@ module.exports = function(app) {
                 Alignment: req.body.Alignment,
                 Background: req.body.Background,
                 // XP: req.body.XP,
-                // Level: req.body.Level,
+                Level: req.body.Level,
                 Strength: req.body.Strength,
                 Dexterity: req.body.Dexterity,
                 Constitution: req.body.Constitution,
