@@ -34,6 +34,9 @@ $(document).ready(function() {
          } */
         // Constructing a newPost object to hand to the database
         const newPost = {
+            CharacterName: $('charactername')
+                .val()
+                .trim(),
             Race: $('#race')
                 .val()
                 .trim(),
@@ -43,42 +46,43 @@ $(document).ready(function() {
             Alignment: $('#alignment')
                 .val()
                 .trim()
-                /*             Background: $('#Background')
-                                .val()
-                                .trim(),
-                            Strength: $('#Strength')
-                                .val()
-                                .trim(),
-                            Dexterity: $('#Dexterity')
-                                .val()
-                                .trim(),
-                            Constitution: $('#Constitution')
-                                .val()
-                                .trim(),
-                            Intelligence: $('#Intelligence')
-                                .val()
-                                .trim(),
-                            Wisdom: $('#Wisdom')
-                                .val()
-                                .trim(),
-                            Charisma: $('#Charisma')
-                                .val()
-                                .trim(),
-                            CharacterName: $('#Character-Name')
-                                .val()
-                                .trim(),
-                            PassiveWisdom: $('#Passive-Wisdom')
-                                .val()
-                                .trim(),
-                            ArmorClass: $('#Armor-Class')
-                                .val()
-                                .trim(),
-                            Initiative: $('#Initiative')
-                                .val()
-                                .trim(),
-                            Speed: $('#Speed')
-                                .val()
-                                .trim() */
+
+            /*             Background: $('#Background')
+                            .val()
+                            .trim(),
+                        Strength: $('#Strength')
+                            .val()
+                            .trim(),
+                        Dexterity: $('#Dexterity')
+                            .val()
+                            .trim(),
+                        Constitution: $('#Constitution')
+                            .val()
+                            .trim(),
+                        Intelligence: $('#Intelligence')
+                            .val()
+                            .trim(),
+                        Wisdom: $('#Wisdom')
+                            .val()
+                            .trim(),
+                        Charisma: $('#Charisma')
+                            .val()
+                            .trim(),
+                        CharacterName: $('#Character-Name')
+                            .val()
+                            .trim(),
+                        PassiveWisdom: $('#Passive-Wisdom')
+                            .val()
+                            .trim(),
+                        ArmorClass: $('#Armor-Class')
+                            .val()
+                            .trim(),
+                        Initiative: $('#Initiative')
+                            .val()
+                            .trim(),
+                        Speed: $('#Speed')
+                            .val()
+                            .trim() */
 
         };
         console.log(newPost);
