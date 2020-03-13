@@ -22,14 +22,15 @@ module.exports = function(app) {
     });
 
     // POST route for saving a new Character
-    app.post("/api/Character", function(req, res) {
+    app.post("/api/character", function(req, res) {
         // create takes an argument of an object describing the item we want to
         // insert into our table. In this case we just we pass in an object with a text
         // and complete property (req.body)
+        console.log(req);
         db.Character.create({
-                Name: req.body.Name,
-                Class: req.body.Class,
-                Race: req.body.Race,
+                CharacterName: req.Name,
+                Class: req.Class,
+                Race: req.Race,
                 Alignment: req.body.Alignment,
                 Background: req.body.Background,
                 // XP: req.body.XP,
