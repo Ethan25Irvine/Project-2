@@ -13,7 +13,7 @@ const db = require("../models");
 module.exports = function(app) {
 
     // GET route for getting all of the Character
-    app.get("/api/character", function(req, res) {
+    app.get("/api/Character", function(req, res) {
         // findAll returns all entries for a table when used with no options
         db.character.findAll({}).then(function(dbCharacter) {
             // We have access to the Character as an argument inside of the callback function
