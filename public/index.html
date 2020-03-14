@@ -1,242 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>DnD Character Creator</title>
-    <!-- Bootstrap CSS CDN  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
-
-    <!-- Font Awesome CSS Icons (For cool glyphicons) -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Critical Failure</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
-
-    <!-- Style to fix the issue of text extending past card length -->
-    <style>
-        .card-body a {
-            word-break: break-all;
-        }
-        
-        .articleHeadline {
-            line-height: 1.5;
-        }
-    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="./js/home.js"></script>
 </head>
-
-<body>
-
-    <!-- Main Bootstrap Search -->
-    <div class="container">
-
-        <!-- Jumbotron for Title -->
-        <div class="jumbotron bg-danger">
-            <h1 class="text-center heading1">
-                <strong>
-          <i class="fas fa-dragon"></i>  Critical Failure</strong>
-            </h1>
-            <h3 class="text-center text-warning"> Character Creator</h3>
+<body id="bodychars">
+    <nav>
+        <div class="logo">
+            Critical Failure      <i class="fas fa-dragon"></i>
         </div>
-
-        <!-- Row for Searching New York Times -->
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-dungeon fa-2x"></i><b>Home</b></a></li>
+            <li><a href="characters.html"><i class="fas fa-hat-wizard fa-2x"></i><b>Characters</b></a></li>
+            <li><a href="create.html"><i class="fas fa-user fa-2x"></i><b>Account</b></a></li>
+            
+        </ul>
+        
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    <div class="container ">
         <div class="row">
-            <div class="col-sm-12">
-                <br>
-                <!-- First card is for handling the search parameters -->
-                <div class="card">
-                    <div class="card-header">
-                        <strong>
-               Character Attributes</strong>
-                    </div>
-                    <div class="card-body">
-
-                        <!-- Here we create an HTML Form for handling the inputs-->
-                        <form role="form" id="characterForm">
-
-                            <!-- Here we create the text box for capturing the search term-->
-                            <div class="form-group">
-                                <label for="name">Name:</label>
-                                <input type="text" class="form-control" id="charactername">
-                            </div>
-                            <div class="form-group">
-                                <label for="race">Race</label>
-                                <select id="race" class="custom-select" aria-labelledby="dropdownMenuButton">
-               <!-- getRace function goes here -->
-                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="class">Class</label>
-                                <select id="class" class="custom-select" aria-labelledby="dropdownMenuButton">
-                <!-- getClass function goes here -->
-                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="alignment">Alignment</label>
-                                <select id="alignment" class="custom-select" aria-labelledby="dropdownMenuButton">
-                <!-- getAlign function goes here -->
-                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="background">Background</label>
-                                <select id="background" class="custom-select" aria-labelledby="dropdownMenuButton">
-                <!-- getBackground function goes here -->
-                </select>
-                                <div class="form-group">
-                                    <label for="name">Level:</label>
-                                    <input type="text" class="form-control" id="level">
-                                </div>
-                            </div>
-                            <div class="text-center">
-                                <h4 class="text-danger">__________Stats__________</h4>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="strength">Strength</label>
-                                <div class="row">
-                                    <div class="col-lg-10">
-                                        <input type="text" id="strength" class="form-control">
-                                    </div>
-                                    <button type="submit" data-target="strength" class="btn text-warning text-center ml-5 col-lg-1 btn-danger Roll">
-                        <i class="fas fa-dice-d6 "></i>
-                    </button>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="dexterity">Dexterity</label>
-                                <div class="row">
-                                    <div class="col-lg-10">
-                                        <input type="text" id="dexterity" class="form-control">
-                                    </div>
-                                    <button type="submit" data-target="dexterity" class="btn text-warning text-center ml-5 col-lg-1 btn-danger Roll">
-                        <i class="fas fa-dice-d6 "></i>
-                    </button>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="constitution">Constitution</label>
-                                <div class="row">
-                                    <div class="col-lg-10">
-                                        <input type="text" id="constitution" class="form-control">
-                                    </div>
-                                    <button type="submit" data-target="constitution" class="btn text-warning text-center ml-5 col-lg-1 btn-danger Roll">
-                        <i class="fas fa-dice-d6 "></i>
-                    </button>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="intelligence">Intelligence</label>
-                                <div class="row">
-                                    <div class="col-lg-10">
-                                        <input type="text" id="intelligence" class="form-control">
-                                    </div>
-                                    <button type="submit" data-target="intelligence" class="btn text-warning text-center ml-5 col-lg-1 btn-danger Roll">
-                        <i class="fas fa-dice-d6 "></i>
-                    </button>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="wisdom">Wisdom</label>
-                                <div class="row">
-                                    <div class="col-lg-10">
-                                        <input type="text" id="wisdom" class="form-control">
-                                    </div>
-                                    <button type="submit" data-target="wisdom" class="btn text-warning text-center ml-5 col-lg-1 btn-danger Roll">
-                        <i class="fas fa-dice-d6 "></i>
-                    </button>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="charisma">Charisma</label>
-                                <div class="row">
-                                    <div class="col-lg-10">
-                                        <input type="text" id="charisma" class="form-control">
-                                    </div>
-                                    <button type="submit" data-target="charisma" class="btn text-warning text-center ml-5 col-lg-1 btn-danger Roll">
-                        <i class="fas fa-dice-d6 "></i>
-                    </button>
-                                </div>
-                            </div>
-                            <div class="text-center">
-                                <h4 class="text-danger">__________Proficiencies__________</h4>
-                            </div>
-                            <!-- Saving throws -->
-                            <div id="proficiencies" class="form-group">
-                                <div class="text-center">
-                                    <div id="prof1"></div>
-                                    <div id="prof2"></div>
-                                    <div id="prof3"></div>
-                                    <div id="prof4"></div>
-
-                                    <!-- checklist goes here -->
-                                </div>
-                            </div>
-
-                            <div class="text-center">
-                                <h4 class="text-danger">__________Additional Stats__________</h4>
-                            </div>
-                            <div class="form-group">
-                                <label for="passive-wisdom">Passive Wisdom (Perception)</label>
-                                <input type="text" class="form-control" id="passivewisdom">
-                            </div>
-                            <div class="form-group">
-                                <label for="armor-class">Armor Class</label>
-                                <input type="text" class="form-control" id="armorclass">
-                            </div>
-                            <div class="form-group">
-                                <label for="initiative">Initiative</label>
-                                <input type="text" class="form-control" id="initiative">
-                            </div>
-                            <div class="form-group">
-                                <label for="speed">Speed</label>
-                                <input type="text" class="form-control" id="speed">
-                            </div>
-
-                            <!-- Here we have our final submit button -->
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <button type="submit" class="btn btn-lg btn-block" id="save">
-                <i class="fas fa-plus-circle"></i> Save</button>
-                                </div>
-                            </div>
-                        </form>
-
-                        <!-- <div class="row">
-              <div class="col-md-12">
-            <button type="submit" class="btn btn-lg btn-block" id="Roll">
-              <i class="fas fa-plus-circle"></i> Roll 4 d6</button>
-            </div> -->
-                    </div>
-                </div>
-            </div>
+          <div class="col-lg-12">
+            <div class="text-center" ><h1 >Welcome to Critical Failure</h1></div>
+          </div>
         </div>
-    </div>
+        <div class="row">
 
+          <div class="col-lg-12">
+            <div class="text-center welcome"><h3>The OK-est place to make your DnD characters</h3></div>
+          </div>
+        </div>
+        
+        
+        <div class="containerchars" id="characters">
+          
+              
+         
+              
+          <div class="card cardchars" >
+              <img src="images/647002-Fat_Wizard.png" class="card-img-top" alt="">
+              <div class="card-body">
+                <h2 class="card-title text-center medievalsharp">Melvin</h2>
+                
+                    
+                
+               <!-- Button trigger modal -->
+  <button type="button" class="btn btn-dark btn-lg btn-block modalbtn" data-toggle="modal" data-target="#exampleModalLong">
+    <h4 class="medievalsharp">Attributes</h4>
+    </button>
+    
+  </div>
+              
+          </div>
+          <div class="card cardchars">
+            <img src="images/195152-Gnome_Bard.png" class="card-img-top" alt="">
+            <div class="card-body">
+              <h2 class="card-title text-center medievalsharp">Biff</h2>
+              
+                  
+              
+             <!-- Button trigger modal -->
+             <button type="button" class="btn btn-dark btn-lg btn-block modalbtn" data-toggle="modal" data-target="#exampleModalLong"> <h4 class="medievalsharp">Attributes</h4>
+    
+  </button>
+  
+  </div>
+            
+        </div>
+        <div class="card cardchars" >
+            <img src="images/647006-Gnome_Fighter.png" class="card-img-top" alt="">
+            <div class="card-body">
+              <h2 class="card-title text-center medievalsharp">Tim</h2>
+              
+                  
+              
+             <!-- Button trigger modal -->
+<button type="button" class="btn btn-dark btn-lg btn-block modalbtn" data-toggle="modal" data-target="#exampleModalLong">
+  <h4 class="medievalsharp">Attributes</h4>
+  </button>
+  
+</div>
+            
 
-
-    <!-- Footer Region -->
-    <div class="row">
-        <div class="col-sm-12">
-
-            <!-- Line Break followed by closing -->
-            <hr class="bg-danger">
-            <h5 class=" text-center text-danger">
-                <small><i class="fas fa-hat-wizard"></i>
-            <i class="fas fa-magic"></i>
-          </small>
-            </h5>
+            
+                    
+            
 
         </div>
-    </div>
-
-    </div>
-
-    <!-- jQuery JS -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-    <!-- Code to the JavaScript File -->
-    <script src="https://kit.fontawesome.com/0f441b8ac8.js" crossorigin="anonymous"></script>
-    <script src="./js/index.js"></script>
-    <script src="./js/indexhandler.js"></script>
-
+        <div class="card cardchars" >
+            <img src="images/195170-Thin_Human_Sorceror.png" class="card-img-top" alt="">
+            <div class="card-body">
+              <h2 class="card-title text-center medievalsharp">Gary</h2>
+              
+                  
+              
+             <!-- Button trigger modal -->
+<button type="button" class="btn btn-dark btn-lg btn-block modalbtn" data-toggle="modal" data-target="#exampleModalLong">
+  <h4 class="medievalsharp">Attributes</h4>
+  </button>
+  
+</div>
+            
+        </div>
+  
+          
+      </div>
+      
+          </div> 
+    
 </body>
-
 </html>

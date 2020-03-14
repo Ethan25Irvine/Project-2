@@ -112,21 +112,39 @@ $(document).ready(function() {
 
         };
         console.log(newPost);
-        // If we're updating a post run updatePost to update a post
-        // Otherwise run submitPost to create a whole new post
-        // if (updating) {
-        //     newPost.id = postId;
-        //     updatePost(newPost);
-        // } else {
+        
+        if (
+            $('#alignment').val().trim() === "" ||
+            $('#armorclass').val().trim()  === "" ||
+            $('#background').val().trim()  === "" ||
+            $('#charactername').val().trim()  === "" ||
+            $('#race').val().trim()  === "" ||
+            $('#charisma').val().trim()  === "" ||
+            $('#class').val().trim()  === "" ||
+            $('#constitution').val().trim()  === "" ||
+            $('#dexterity').val().trim()  === "" ||
+            $('#initiative').val().trim()  === "" ||
+            $('#intelligence').val().trim()  === "" ||
+            $('#level').val().trim()  === "" ||
+            $('#speed').val().trim()  === "" ||
+            $('#strength').val().trim()  === "" ||
+            $('#wisdom').val().trim()  === "" ||
+            $('#passivewisdom').val().trim()  === ""
+        )
+        {
+            alert("All feilds must be filled out");
+        } else {
             submitPost(newPost);
-        // }
+        }
+            
+        
     }
 
     // Submits a new post and brings user to blog page upon completion
     function submitPost(post) {
         $.post("/api/character", post, function(results) {
             // console.log(results);
-            // window.location.href = "/index.html";
+            window.location.href = "/characters.html";
         });
     }
 
