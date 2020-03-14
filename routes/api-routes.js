@@ -30,49 +30,49 @@ module.exports = function(app) {
 		db.Character
 			.create({
 				/*                Acrobatics: req.Acrobatics, */
-				Alignment     : req.body.Alignment,
+				Alignment: req.body.Alignment,
 				/*               AnimalHandling: req.AnimalHandling, */
 				/* Arcana: req.Arcana, */
-				ArmorClass    : req.body.ArmorClass,
+				ArmorClass: req.body.ArmorClass,
 				/*             Athletics: req.Athletics, */
-				Background    : req.body.Background,
-				CharacterName : req.body.CharacterName,
-				Charisma      : req.body.Charisma,
+				Background: req.body.Background,
+				CharacterName: req.body.CharacterName,
+				Charisma: req.body.Charisma,
 				/*                CharismaST: req.CharismaST, */
-				Class         : req.body.Class,
-				Constitution  : req.body.Constitution,
+				Class: req.body.Class,
+				Constitution: req.body.Constitution,
 				/* ConstitutionST: req.ConstitutionST, */
 				/* Deception: req.Deception, */
-				Dexterity     : req.body.Dexterity,
+				Dexterity: req.body.Dexterity,
 				/* DexterityST: req.DexterityST, */
 				/* History: req.History,
                 HP: req.HP,
                 */
-				Initiative    : req.body.Initiative,
+				Initiative: req.body.Initiative,
 				/* Insight: req.Insight, */
-				Intelligence  : req.body.Intelligence,
+				Intelligence: req.body.Intelligence,
 				/* IntelligenceST: req.IntelligenceST, */
 				/* Intimidation: req.Intimidation, */
 				/* Investigation: req.Investigation, */
-				Level         : req.body.Level,
+				Level: req.body.Level,
 				/* Medicine: req.Medicine, */
 				/* Nature: req.Nature, */
-				passiveWisdom : req.body.passiveWisdom,
+				passiveWisdom: req.body.passiveWisdom,
 				/* Perception: req.Perception,
                 Performance: req.Performance,
                 Persuasion: req.Persuasion,
                  */
 				// ProficiencyBonus: req.body.ProficiencyBonus,
-				Race          : req.body.Race,
+				Race: req.body.Race,
 				/* Religion: req.Religion,
                 SlightOfHand: req.SlightOfHand,
                  */
-				Speed         : req.body.Speed,
+				Speed: req.body.Speed,
 				/* Stealth: req.Stealth, */
-				Strength      : req.body.Strength,
+				Strength: req.body.Strength,
 				/* StrengthST: req.StrengthST, */
 				/* Survival: req.Survival, */
-				Wisdom        : req.body.Wisdom
+				Wisdom: req.body.Wisdom
 				/* WisdomST: req.WisdomST */
 			})
 			.then(function(dbCharacter) {
@@ -111,53 +111,55 @@ module.exports = function(app) {
 		db.Character
 			.update(
 				{
-					/*                Acrobatics: req.Acrobatics, /
-                Alignment: req.body.Alignment,
-                /               AnimalHandling: req.AnimalHandling, /
-                / Arcana: req.Arcana, /
-                ArmorClass: req.body.ArmorClass,
-                /             Athletics: req.Athletics, /
-                Background: req.body.Background,
-                CharacterName: req.body.CharacterName,
-                Charisma: req.body.Charisma,
-                /                CharismaST: req.CharismaST, /
-                Class: req.body.Class,
-                Constitution: req.body.Constitution,
-                / ConstitutionST: req.ConstitutionST, /
-                / Deception: req.Deception, /
-                Dexterity: req.body.Dexterity,
-                / DexterityST: req.DexterityST, /
-                / History: req.History,
+						/*                Acrobatics: req.Acrobatics, */
+				Alignment: req.body.Alignment,
+				/*               AnimalHandling: req.AnimalHandling, */
+				/* Arcana: req.Arcana, */
+				ArmorClass: req.body.ArmorClass,
+				/*             Athletics: req.Athletics, */
+				Background: req.body.Background,
+				CharacterName: req.body.CharacterName,
+				Charisma: req.body.Charisma,
+				/*                CharismaST: req.CharismaST, */
+				Class: req.body.Class,
+				Constitution: req.body.Constitution,
+				/* ConstitutionST: req.ConstitutionST, */
+				/* Deception: req.Deception, */
+				Dexterity: req.body.Dexterity,
+				/* DexterityST: req.DexterityST, */
+				/* History: req.History,
                 HP: req.HP,
-                /
-                Initiative: req.body.Initiative,
-                / Insight: req.Insight, /
-                Intelligence: req.body.Intelligence,
-                / IntelligenceST: req.IntelligenceST, /
-                / Intimidation: req.Intimidation, /
-                / Investigation: req.Investigation, /
-                Level: req.body.Level,
-                / Medicine: req.Medicine, /
-                / Nature: req.Nature, /
-                passiveWisdom: req.body.passiveWisdom,
-                / Perception: req.Perception,
+                */
+				Initiative: req.body.Initiative,
+				/* Insight: req.Insight, */
+				Intelligence: req.body.Intelligence,
+				/* IntelligenceST: req.IntelligenceST, */
+				/* Intimidation: req.Intimidation, */
+				/* Investigation: req.Investigation, */
+				Level: req.body.Level,
+				/* Medicine: req.Medicine, */
+				/* Nature: req.Nature, */
+				passiveWisdom: req.body.passiveWisdom,
+				/* Perception: req.Perception,
                 Performance: req.Performance,
                 Persuasion: req.Persuasion,
-                 /
-                // ProficiencyBonus: req.body.ProficiencyBonus,
-                Race: req.body.Race,
-                / Religion: req.Religion,
+                 */
+				// ProficiencyBonus: req.body.ProficiencyBonus,
+				Race: req.body.Race,
+				/* Religion: req.Religion,
                 SlightOfHand: req.SlightOfHand,
-                 /
-                Speed: req.body.Speed,
-                / Stealth: req.Stealth, */
-                Strength: req.body.Strength,
-
-                Wisdom: req.body.Wisdom
+                 */
+				Speed: req.body.Speed,
+				/* Stealth: req.Stealth, */
+				Strength: req.body.Strength,
+				/* StrengthST: req.StrengthST, */
+				/* Survival: req.Survival, */
+				Wisdom: req.body.Wisdom
+				/* WisdomST: req.WisdomST */
 				},
 				{
 					where : {
-						id : req.id
+						id : req.body.id
 					}
 				}
 			)
