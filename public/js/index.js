@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
     getClass();
     getRace();
     getProf1();
@@ -9,12 +9,14 @@ $(document).ready(function () {
     getBackground();
 })
 
-$(".Roll").on("click", function () {
+$(".Roll").on("click", function() {
     event.preventDefault();
 
     const target = $(this).attr("data-target");
     // console.log($(this.id));
-    roll([[4, 6]], target);
+    roll([
+        [4, 6]
+    ], target);
 })
 
 // dice roll functionality
@@ -44,6 +46,7 @@ function roll(dice, target) {
 
 
 const classes = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"];
+
 function getClass() {
     for (let i = 0; i < classes.length; i++) {
         $("#class").append("<option value=" + classes[i] + ">" + classes[i] + "</option>");
@@ -51,6 +54,7 @@ function getClass() {
 };
 
 const races = ["Dragonborn", "Dwarf", "Elf", "Gnome", "Half-ELf", "Half-Orc", "Halfling", "Human", "Tiefling"];
+
 function getRace() {
     for (let i = 0; i < races.length; i++) {
         $("#race").append("<option value=" + races[i] + ">" + races[i] + "</option>");
@@ -76,7 +80,7 @@ const back = [
     "Alcoholic",
     "Alcoholic Scientist",
     "Amnesiac",
-   "Ancient Cultist",
+    "Ancient Cultist",
     "Ancient King",
     "Ancient One",
     "Antiquarian",
@@ -240,7 +244,9 @@ const back = [
     "Slayer",
     "Sleuth",
     "Smuggler, Variant",
-    "Smuggler"];
+    "Smuggler"
+];
+
 function getBackground() {
     for (let i = 0; i < back.length; i++) {
         $("#background").append("<option value=" + back[i] + ">" + back[i] + "</option>");
