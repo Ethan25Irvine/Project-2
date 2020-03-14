@@ -6,7 +6,6 @@ $(document).ready(function() {
     $(characterForm).on("submit", handleFormSubmit);
     // Gets the part of the url that comes after the "?" (which we have if we're updating a post)
     const url = window.location.search;
-    let postId;
     let authorId;
     // Sets a flag for whether or not we're updating a post to be false initially
     let updating = false;
@@ -33,7 +32,7 @@ $(document).ready(function() {
              return;
          } */
         // Constructing a newPost object to hand to the database
-        const newPost = {
+        const newChar = {
             /*    Acrobatics: "", */
             Alignment: $('#alignment')
                 .val()
@@ -111,22 +110,41 @@ $(document).ready(function() {
                 .trim()
 
         };
-        console.log(newPost);
-        // If we're updating a post run updatePost to update a post
-        // Otherwise run submitPost to create a whole new post
-        // if (updating) {
-        //     newPost.id = postId;
-        //     updatePost(newPost);
-        // } else {
-            submitPost(newPost);
-        // }
-    }
+        console.log(newChar);
+        
+        if (
+            $('#alignment').val().trim() === "" ||
+            $('#armorclass').val().trim()  === "" ||
+            $('#background').val().trim()  === "" ||
+            $('#charactername').val().trim()  === "" ||
+            $('#race').val().trim()  === "" ||
+            $('#charisma').val().trim()  === "" ||
+            $('#class').val().trim()  === "" ||
+            $('#constitution').val().trim()  === "" ||
+            $('#dexterity').val().trim()  === "" ||
+            $('#initiative').val().trim()  === "" ||
+            $('#intelligence').val().trim()  === "" ||
+            $('#level').val().trim()  === "" ||
+            $('#speed').val().trim()  === "" ||
+            $('#strength').val().trim()  === "" ||
+            $('#wisdom').val().trim()  === "" ||
+            $('#passivewisdom').val().trim()  === ""
+        )
+        {
+            alert("All feilds must be filled out");
+        } else {
+                submitPost(newChar);
+              }
+        }
+            
+        
+
 
     // Submits a new post and brings user to blog page upon completion
     function submitPost(post) {
         $.post("/api/character", post, function(results) {
             // console.log(results);
-            // window.location.href = "/index.html";
+            window.location.href = "/characters.html";
         });
     }
 
@@ -188,14 +206,14 @@ $(document).ready(function() {
         } */
 
     // Update a given post, bring user to the blog page when done
-    function updatePost(post) {
-        $.ajax({
-                method: "PUT",
-                url: "/api/characters",
-                data: post
-            })
-            .then(function() {
-                window.location.href = "/index.html";
-            });
-    }
+    // function updatePost(post) {
+    //     $.ajax({
+    //             method: "PUT",
+    //             url: "/api/character",
+    //             data: post
+    //         })
+    //         .then(function() {
+    //             window.location.href = "/index.html";
+    //         });
+    // }
 });
