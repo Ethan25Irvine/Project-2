@@ -34,16 +34,16 @@ $(document).ready(function() {
          } */
         // Constructing a newPost object to hand to the database
         const newPost = {
-            Acrobatics: "",
+            /*    Acrobatics: "", */
             Alignment: $('#alignment')
                 .val()
                 .trim(),
-            AnimalHandling: "",
-            Arcana: "",
+            /* AnimalHandling: "", */
+            /* Arcana: "", */
             ArmorClass: $('#armorclass')
                 .val()
                 .trim(),
-            Athletics: "",
+            /* Athletics: "", */
             Background: $('#background')
                 .val()
                 .trim(),
@@ -53,57 +53,58 @@ $(document).ready(function() {
             Race: $('#race')
                 .val()
                 .trim(),
-            Charisma: $('#Charisma')
+            Charisma: $('#charisma')
                 .val()
                 .trim(),
-            CharismaST: "",
+            /* CharismaST: "", */
             Class: $('#class')
                 .val()
                 .trim(),
-            Constitution: $('#Constitution')
+            Constitution: $('#constitution')
                 .val()
                 .trim(),
-            ConstitutionST: "",
-            Deception: "",
-            Dexterity: $('#Dexterity')
+            /* ConstitutionST: "", */
+            /* Deception: "", */
+            Dexterity: $('#dexterity')
                 .val()
                 .trim(),
-            DexterityST: "",
-            History: "",
-            HP: "",
+            /* DexterityST: "", */
+            /* History: "", */
+            /*   HP: "", */
             Initiative: $('#initiative')
                 .val()
                 .trim(),
-            Insight: "",
-            Intelligence: $('#Intelligence')
+            /* Insight: "", */
+            Intelligence: $('#intelligence')
                 .val()
                 .trim(),
-            IntelligenceST: "",
+            /* IntelligenceST: "",
             Intimidation: "",
-            Investigation: "",
+            Investigation: "",*/
             Level: $('#level')
                 .val()
                 .trim(),
-            Medicine: "",
+            /*Medicine: "",
             Nature: "",
             Perception: "",
             Performance: "",
             Persuasion: "",
+             */
             ProficiencyBonus: "",
             Race: "",
-            Religion: "",
-            SlightOfHand: "",
+            /* Religion: "", */
+            /* SlightOfHand: "", */
             Speed: $('#speed')
                 .val()
                 .trim(),
-            Stealth: "",
-            Strength: $('#Strength')
+            /* Stealth: "", */
+            Strength: $('#strength')
                 .val()
                 .trim(),
-            StrengthST: "",
-            Survival: "",
-            WisdomST: "",
-            Wisdom: $('#Wisdom')
+            /* StrengthST: "", */
+            /* Survival: "", */
+            /* WisdomST: "", */
+            Wisdom: $('#wisdom')
                 .val()
                 .trim(),
             WisdomST: $('#passivewisdom')

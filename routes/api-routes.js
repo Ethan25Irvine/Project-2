@@ -29,47 +29,50 @@ module.exports = function(app) {
         // and complete property (req.body)
         console.log(req);
         db.Character.create({
-                Acrobatics: req.Acrobatics,
+                /*                Acrobatics: req.Acrobatics, */
                 Alignment: req.Alignment,
-                AnimalHandling: req.AnimalHandling,
-                Arcana: req.Arcana,
+                /*               AnimalHandling: req.AnimalHandling, */
+                /* Arcana: req.Arcana, */
                 ArmorClass: req.ArmorClass,
-                Athletics: req.Athletics,
+                /*             Athletics: req.Athletics, */
                 Background: req.Background,
                 CharacterName: req.CharacterName,
                 Charisma: req.Charisma,
-                CharismaST: req.CharismaST,
+                /*                CharismaST: req.CharismaST, */
                 Class: req.Class,
                 Constitution: req.Constitution,
-                ConstitutionST: req.ConstitutionST,
-                Deception: req.Deception,
+                /* ConstitutionST: req.ConstitutionST, */
+                /* Deception: req.Deception, */
                 Dexterity: req.Dexterity,
-                DexterityST: req.DexterityST,
-                History: req.History,
+                /* DexterityST: req.DexterityST, */
+                /* History: req.History,
                 HP: req.HP,
+                 */
                 Initiative: req.Initiative,
-                Insight: req.Insight,
+                /* Insight: req.Insight, */
                 Intelligence: req.Intelligence,
-                IntelligenceST: req.IntelligenceST,
-                Intimidation: req.Intimidation,
-                Investigation: req.Investigation,
+                /* IntelligenceST: req.IntelligenceST, */
+                /* Intimidation: req.Intimidation, */
+                /* Investigation: req.Investigation, */
                 Level: req.Level,
-                Medicine: req.Medicine,
-                Nature: req.Nature,
-                Perception: req.Perception,
+                /* Medicine: req.Medicine, */
+                /* Nature: req.Nature, */
+                /* Perception: req.Perception,
                 Performance: req.Performance,
                 Persuasion: req.Persuasion,
+                 */
                 ProficiencyBonus: req.ProficiencyBonus,
                 Race: req.Race,
-                Religion: req.Religion,
+                /* Religion: req.Religion,
                 SlightOfHand: req.SlightOfHand,
+                 */
                 Speed: req.Speed,
-                Stealth: req.Stealth,
+                /* Stealth: req.Stealth, */
                 Strength: req.Strength,
-                StrengthST: req.StrengthST,
-                Survival: req.Survival,
+                /* StrengthST: req.StrengthST, */
+                /* Survival: req.Survival, */
                 Wisdom: req.Wisdom,
-                WisdomST: req.WisdomST
+                /* WisdomST: req.WisdomST */
             }).then(function(dbCharacter) {
                 // We have access to the new Character as an argument inside of the callback function
                 res.json(dbCharacter);
@@ -103,47 +106,50 @@ module.exports = function(app) {
         // we use where to describe which objects
         // we want to update
         db.Character.update({
-                Acrobatics: req.Acrobatics,
+                /*                Acrobatics: req.Acrobatics, */
                 Alignment: req.Alignment,
-                AnimalHandling: req.AnimalHandling,
-                Arcana: req.Arcana,
+                /*               AnimalHandling: req.AnimalHandling, */
+                /* Arcana: req.Arcana, */
                 ArmorClass: req.ArmorClass,
-                Athletics: req.Athletics,
+                /*             Athletics: req.Athletics, */
                 Background: req.Background,
                 CharacterName: req.CharacterName,
                 Charisma: req.Charisma,
-                CharismaST: req.CharismaST,
+                /*                CharismaST: req.CharismaST, */
                 Class: req.Class,
                 Constitution: req.Constitution,
-                ConstitutionST: req.ConstitutionST,
-                Deception: req.Deception,
+                /* ConstitutionST: req.ConstitutionST, */
+                /* Deception: req.Deception, */
                 Dexterity: req.Dexterity,
-                DexterityST: req.DexterityST,
-                History: req.History,
+                /* DexterityST: req.DexterityST, */
+                /* History: req.History,
                 HP: req.HP,
+                 */
                 Initiative: req.Initiative,
-                Insight: req.Insight,
+                /* Insight: req.Insight, */
                 Intelligence: req.Intelligence,
-                IntelligenceST: req.IntelligenceST,
-                Intimidation: req.Intimidation,
-                Investigation: req.Investigation,
+                /* IntelligenceST: req.IntelligenceST, */
+                /* Intimidation: req.Intimidation, */
+                /* Investigation: req.Investigation, */
                 Level: req.Level,
-                Medicine: req.Medicine,
-                Nature: req.Nature,
-                Perception: req.Perception,
+                /* Medicine: req.Medicine, */
+                /* Nature: req.Nature, */
+                /* Perception: req.Perception,
                 Performance: req.Performance,
                 Persuasion: req.Persuasion,
+                 */
                 ProficiencyBonus: req.ProficiencyBonus,
                 Race: req.Race,
-                Religion: req.Religion,
+                /* Religion: req.Religion,
                 SlightOfHand: req.SlightOfHand,
+                 */
                 Speed: req.Speed,
-                Stealth: req.Stealth,
+                /* Stealth: req.Stealth, */
                 Strength: req.Strength,
-                StrengthST: req.StrengthST,
-                Survival: req.Survival,
+                /* StrengthST: req.StrengthST, */
+                /* Survival: req.Survival, */
                 Wisdom: req.Wisdom,
-                WisdomST: req.WisdomST
+                /* WisdomST: req.WisdomST */
             }, {
                 where: {
                     id: req.id
