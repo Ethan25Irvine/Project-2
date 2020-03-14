@@ -29,49 +29,50 @@ module.exports = function(app) {
         // and complete property (req.body)
         console.log(req);
         db.Character.create({
-                CharacterName: req.Name,
-                Class: req.Class,
-                Race: req.Race,
+                /*                Acrobatics: req.Acrobatics, */
                 Alignment: req.Alignment,
-                Background: req.Background,
-                // XP: req.XP,
-                Level: req.Level,
-                Strength: req.Strength,
-                Dexterity: req.Dexterity,
-                Constitution: req.Constitution,
-                Intelligence: req.Intelligence,
-                Wisdom: req.Wisdom,
-                Charisma: req.Charisma,
+                /*               AnimalHandling: req.AnimalHandling, */
+                /* Arcana: req.Arcana, */
                 ArmorClass: req.ArmorClass,
-                // ProficiencyBonus: req.ProficiencyBonus,
-                Speed: req.Speed,
+                /*             Athletics: req.Athletics, */
+                Background: req.Background,
+                CharacterName: req.CharacterName,
+                Charisma: req.Charisma,
+                /*                CharismaST: req.CharismaST, */
+                Class: req.Class,
+                Constitution: req.Constitution,
+                /* ConstitutionST: req.ConstitutionST, */
+                /* Deception: req.Deception, */
+                Dexterity: req.Dexterity,
+                /* DexterityST: req.DexterityST, */
+                /* History: req.History,
                 HP: req.HP,
-                // Successes: req.Successes,
-                // Failures: req.Failures,
-                StrengthST: req.StrengthST,
-                DexterityST: req.DexterityST,
-                ConstitutionST: req.ConstitutionST,
-                IntelligenceST: req.IntelligenceST,
-                WisdomST: req.WisdomST,
-                CharismaST: req.CharismaST,
-                Acrobatics: req.Acrobatics,
-                AnimalHandling: req.AnimalHandling,
-                Arcana: req.Arcana,
-                Athletics: req.Athletics,
-                Deception: req.Deception,
-                History: req.History,
-                Insight: req.Insight,
-                Intimidation: req.Intimidation,
-                Investigation: req.Investigation,
-                Medicine: req.Medicine,
-                Nature: req.Nature,
-                Perception: req.Perception,
+                 */
+                Initiative: req.Initiative,
+                /* Insight: req.Insight, */
+                Intelligence: req.Intelligence,
+                /* IntelligenceST: req.IntelligenceST, */
+                /* Intimidation: req.Intimidation, */
+                /* Investigation: req.Investigation, */
+                Level: req.Level,
+                /* Medicine: req.Medicine, */
+                /* Nature: req.Nature, */
+                /* Perception: req.Perception,
                 Performance: req.Performance,
                 Persuasion: req.Persuasion,
-                Religion: req.Religion,
+                 */
+                ProficiencyBonus: req.ProficiencyBonus,
+                Race: req.Race,
+                /* Religion: req.Religion,
                 SlightOfHand: req.SlightOfHand,
-                Stealth: req.Stealth,
-                Survival: req.Survival
+                 */
+                Speed: req.Speed,
+                /* Stealth: req.Stealth, */
+                Strength: req.Strength,
+                /* StrengthST: req.StrengthST, */
+                /* Survival: req.Survival, */
+                Wisdom: req.Wisdom,
+                /* WisdomST: req.WisdomST */
             }).then(function(dbCharacter) {
                 // We have access to the new Character as an argument inside of the callback function
                 res.json(dbCharacter);
@@ -105,49 +106,50 @@ module.exports = function(app) {
         // we use where to describe which objects
         // we want to update
         db.Character.update({
-                Name: req.Name,
-                Class: req.Class,
-                Race: req.Race,
+                /*                Acrobatics: req.Acrobatics, */
                 Alignment: req.Alignment,
-                Background: req.Background,
-                XP: req.XP,
-                Level: req.Level,
-                Strength: req.Strength,
-                Dexterity: req.Dexterity,
-                Constitution: req.Constitution,
-                Intelligence: req.Intelligence,
-                Wisdom: req.Wisdom,
-                Charisma: req.Charisma,
+                /*               AnimalHandling: req.AnimalHandling, */
+                /* Arcana: req.Arcana, */
                 ArmorClass: req.ArmorClass,
-                ProficiencyBonus: req.ProficiencyBonus,
-                Speed: req.Speed,
+                /*             Athletics: req.Athletics, */
+                Background: req.Background,
+                CharacterName: req.CharacterName,
+                Charisma: req.Charisma,
+                /*                CharismaST: req.CharismaST, */
+                Class: req.Class,
+                Constitution: req.Constitution,
+                /* ConstitutionST: req.ConstitutionST, */
+                /* Deception: req.Deception, */
+                Dexterity: req.Dexterity,
+                /* DexterityST: req.DexterityST, */
+                /* History: req.History,
                 HP: req.HP,
-                Successes: req.Successes,
-                Failures: req.Failures,
-                StrengthST: req.StrengthST,
-                DexterityST: req.DexterityST,
-                ConstitutionST: req.ConstitutionST,
-                IntelligenceST: req.IntelligenceST,
-                WisdomST: req.WisdomST,
-                CharismaST: req.CharismaST,
-                Acrobatics: req.Acrobatics,
-                AnimalHandling: req.AnimalHandling,
-                Arcana: req.Arcana,
-                Athletics: req.Athletics,
-                Deception: req.Deception,
-                History: req.History,
-                Insight: req.Insight,
-                Intimidation: req.Intimidation,
-                Investigation: req.Investigation,
-                Medicine: req.Medicine,
-                Nature: req.Nature,
-                Perception: req.Perception,
+                 */
+                Initiative: req.Initiative,
+                /* Insight: req.Insight, */
+                Intelligence: req.Intelligence,
+                /* IntelligenceST: req.IntelligenceST, */
+                /* Intimidation: req.Intimidation, */
+                /* Investigation: req.Investigation, */
+                Level: req.Level,
+                /* Medicine: req.Medicine, */
+                /* Nature: req.Nature, */
+                /* Perception: req.Perception,
                 Performance: req.Performance,
                 Persuasion: req.Persuasion,
-                Religion: req.Religion,
+                 */
+                ProficiencyBonus: req.ProficiencyBonus,
+                Race: req.Race,
+                /* Religion: req.Religion,
                 SlightOfHand: req.SlightOfHand,
-                Stealth: req.Stealth,
-                Survival: req.Survival
+                 */
+                Speed: req.Speed,
+                /* Stealth: req.Stealth, */
+                Strength: req.Strength,
+                /* StrengthST: req.StrengthST, */
+                /* Survival: req.Survival, */
+                Wisdom: req.Wisdom,
+                /* WisdomST: req.WisdomST */
             }, {
                 where: {
                     id: req.id
