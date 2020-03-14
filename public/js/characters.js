@@ -65,6 +65,145 @@ $(document).ready(function() {
           // $("#update").on("submit", handleFormSubmit);
        
         });
+
+        $(document).on("click", ".submit", check);
+
+        function check(){
+          $.ajax({
+            method: "GET",
+            url: "/api/character",
+        })
+        .then(function(res) {
+            if (res.id === $(this).id){
+              handleFormUpdate();
+            }
+        });
+        }
+        function handleFormUpdate(event) {
+          // event.preventDefault();
+          // Wont submit the post if we are missing a body, title, or author
+          /*  if (!titleInput.val().trim() || !bodyInput.val().trim() || !authorSelect.val()) {
+               return;
+           } */
+          // Constructing a newPost object to hand to the database
+          const newChar = {
+              id: $("#id").val().trim(),
+              /*    Acrobatics: "", */
+              Alignment: $('#alignment')
+                  .val()
+                  .trim(),
+              /* AnimalHandling: "", */
+              /* Arcana: "", */
+              ArmorClass: $('#armorclass')
+                  .val()
+                  .trim(),
+              /* Athletics: "", */
+              Background: $('#background')
+                  .val()
+                  .trim(),
+              CharacterName: $('#charactername')
+                  .val()
+                  .trim(),
+              Race: $('#race')
+                  .val()
+                  .trim(),
+              Charisma: $('#charisma')
+                  .val()
+                  .trim(),
+              /* CharismaST: "", */
+              Class: $('#class')
+                  .val()
+                  .trim(),
+              Constitution: $('#constitution')
+                  .val()
+                  .trim(),
+              /* ConstitutionST: "", */
+              /* Deception: "", */
+              Dexterity: $('#dexterity')
+                  .val()
+                  .trim(),
+              /* DexterityST: "", */
+              /* History: "", */
+              /*   HP: "", */
+              Initiative: $('#initiative')
+                  .val()
+                  .trim(),
+              /* Insight: "", */
+              Intelligence: $('#intelligence')
+                  .val()
+                  .trim(),
+              /* IntelligenceST: "",
+              Intimidation: "",
+              Investigation: "",*/
+              Level: $('#level')
+                  .val()
+                  .trim(),
+              /*Medicine: "",
+              Nature: "",
+              Perception: "",
+              Performance: "",
+              Persuasion: "",
+               */
+              
+              /* Religion: "", */
+              /* SlightOfHand: "", */
+              Speed: $('#speed')
+                  .val()
+                  .trim(),
+              /* Stealth: "", */
+              Strength: $('#strength')
+                  .val()
+                  .trim(),
+              /* StrengthST: "", */
+              /* Survival: "", */
+              /* WisdomST: "", */
+              Wisdom: $('#wisdom')
+                  .val()
+                  .trim(),
+              passiveWisdom: $('#passivewisdom')
+                  .val()
+                  .trim()
+  
+          };
+          // console.log(newChar);
+          
+          if (
+              $('#alignment').val().trim() === "" ||
+              $('#armorclass').val().trim()  === "" ||
+              $('#background').val().trim()  === "" ||
+              $('#charactername').val().trim()  === "" ||
+              $('#race').val().trim()  === "" ||
+              $('#charisma').val().trim()  === "" ||
+              $('#class').val().trim()  === "" ||
+              $('#constitution').val().trim()  === "" ||
+              $('#dexterity').val().trim()  === "" ||
+              $('#initiative').val().trim()  === "" ||
+              $('#intelligence').val().trim()  === "" ||
+              $('#level').val().trim()  === "" ||
+              $('#speed').val().trim()  === "" ||
+              $('#strength').val().trim()  === "" ||
+              $('#wisdom').val().trim()  === "" ||
+              $('#passivewisdom').val().trim()  === ""
+          )
+          {
+              alert("All feilds must be filled out");
+          } else {
+                  updatePost(newChar);
+                  console.log(newChar);
+                }
+          }
+
+     function updatePost(post) {
+       console.log(post)
+      $.ajax({
+        method: "PUT",
+        url: "/api/character",
+        data: post,
+      }).then(
+        window.location.href = "/characters.html"
+      )};
+  }
+);
         function deleteCharacter(event) {
           event.stopPropagation();
 
@@ -97,4 +236,4 @@ $(document).ready(function() {
         })
          
        
-});
+
