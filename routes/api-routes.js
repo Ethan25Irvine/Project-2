@@ -76,8 +76,8 @@ module.exports = function(app) {
                 /* WisdomST: req.WisdomST */
             }).then(function(dbCharacter) {
                 // We have access to the new Character as an argument inside of the callback function
-                // res.json(dbCharacter);
-                console.log(dbCharacter)
+                res.json(dbCharacter);
+                // console.log(dbCharacter)
             })
             .catch(function(err) {
                 // Whenever a validation or flag fails, an error is thrown
