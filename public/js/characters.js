@@ -1,8 +1,9 @@
 // this is for characters page
 $(document).ready(function() {
+  
 	$('#create').on('click', function() {
-		// const url = './index.html';
-		// window.location = url;
+		const url = './create.html';
+		window.location = url;
 		// const card = $("<div class= 'card cardchars'>");
 		// const cardBody = $('<div>');
 		// const content = $("<h2 class='card-title text-center medievalsharp'>Melvin</h2>");
@@ -25,6 +26,8 @@ $(document).ready(function() {
 		// );
 		// $('body').append(modal);
     });
+    
+   
     $.ajax({
         method: "GET",
         url: "/api/character",
@@ -75,12 +78,43 @@ $(document).ready(function() {
             console.log(res[i].Race);
             const modal = $(
 
-			        "<div class='modal falde' id='"+res[i].CharacterName+"'><div class='modal-dialog'><div class='modal-content'><div class='modal-header'>STATS</div><div class='modal-body'><div class='card'><div class='card-header'><strong>Character Attributes</strong></div><div class='card-body'><!-- Here we create an HTML Form for handling the inputs--><form role='form' id='characterForm'><!-- Here we create the text box for capturing the search term--><div class='form-group'><label for='name'>Name:</label><input type='text' class='form-control' value="+res[i].CharacterName+" id='charactername'></div><div class='form-group'><label for='race'>Race</label><select id='race' class='custom-select' aria-labelledby='dropdownMenuButton'><option value='"+res[i].Race+"'>"+res[i].Race+"</option></select></div><div class='form-group'><label for='class'>Class</label><select id='class' class='custom-select' aria-labelledby='dropdownMenuButton'><option value='"+res[i].Class+"'>"+res[i].Class+"</option></select></div><div class='form-group'><label for='alignment'>Alignment</label><select id='alignment' class='custom-select' aria-labelledby='dropdownMenuButton'><option value='"+res[i].Alignment+"'>"+res[i].Alignment+"</option></select></div><div class='form-group'><label for='background'>Background</label><select id='background' class='custom-select' aria-labelledby='dropdownMenuButton'><option value='"+res[i].Background+"'>"+res[i].Background+" </option></select><div class='form-group'><label for='name'>Level:</label><input type='text' value="+res[i].Level+" class='form-control' id='level'></div></div><div class='text-center'><h4 class='text-danger'>__________Stats__________</h4></div><div class='form-group'><label for='strength'>Strength</label><div class='row'><div class='col-lg-12'><input type='text' id='strength' value="+res[i].Strength+" class='form-control'></div></div></div><div class='form-group'><label for='dexterity'>Dexterity</label><div class='row'><div class='col-lg-12'><input type='text' value="+res[i].Dexterity+" id='dexterity' class='form-control'></div></div></div><div class='form-group'><label for='constitution'>Constitution</label><div class='row'><div class='col-lg-12'><input type='text' value="+res[i].Constitution+" id='constitution' class='form-control'></div></div></div><div class='form-group'><label for='intelligence'>Intelligence</label><div class='row'><div class='col-lg-12'><input type='text' value="+res[i].Intelligence+" id='intelligence' class='form-control'></div></div></div><div class='form-group'><label for='wisdom'>Wisdom</label><div class='row'><div class='col-lg-12'><input type='text' id='wisdom' value="+res[i].Wisdom+" class='form-control'></div></div></div><div class='form-group'><label for='charisma'>Charisma</label><div class='row'><div class='col-lg-12'><input type='text' id='charisma' value="+res[i].Charisma+" class='form-control'></div></div></div></div></div><div class='text-center'><h4 class='text-danger'>_______Additional Stats______</h4></div><div class='form-group'><label for='passive-wisdom'>Passive Wisdom (Perception)</label><input type='text' value="+res[i].passiveWisdom+" class='form-control' id='passivewisdom'></div><div class='form-group'><label for='armor-class'>Armor Class</label><input type='text' value="+res[i].ArmorClass+" class='form-control' id='armorclass'></div><div class='form-group'><label for='initiative'>Initiative</label><input type='text' class='form-control' value="+res[i].Initiative+" id='initiative'></div><div class='form-group'><label for='speed'>Speed</label><input type='text' class='form-control' value="+res[i].Speed+" id='speed'></div><!-- Here we have our final submit button --><div class='row'><div class='col-md-12'><button type='submit' class='btn btn-lg btn-block' id='update'><i class='fas fa-plus-circle'></i> Save</button></div></div></form><!-- <div class='row'><div class='col-md-12'><button type='submit' class='btn btn-lg btn-block' id='Roll'><i class='fas fa-plus-circle'></i> Roll 4 d6</button></div></div></div></div><div class='modal-footer'><button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button></div></div></div></div>"
+              "<div class='modal falde' id='"+res[i].CharacterName+"'><div class='modal-dialog'><div class='modal-content'><div class='modal-header'>STATS</div><div class='modal-body'><div class='card'><div class='card-header'><strong>Character Attributes</strong></div><div class='card-body'><!-- Here we create an HTML Form for handling the inputs--><form role='form' id='characterForm'><!-- Here we create the text box for capturing the search term--><div class='form-group'><label for='name'>Name:</label><input type='text' class='form-control' value="+res[i].CharacterName+" id='charactername'></div><div class='form-group'><label for='race'>Race</label><select id='race' class='custom-select' aria-labelledby='dropdownMenuButton'><option value='"+res[i].Race+"'>"+res[i].Race+"</option></select></div><div class='form-group'><label for='class'>Class</label><select id='class' class='custom-select' aria-labelledby='dropdownMenuButton'><option value='"+res[i].Class+"'>"+res[i].Class+"</option></select></div><div class='form-group'><label for='alignment'>Alignment</label><select id='alignment' class='custom-select' aria-labelledby='dropdownMenuButton'><option value='"+res[i].Alignment+"'>"+res[i].Alignment+"</option></select></div><div class='form-group'><label for='background'>Background</label><select id='background' class='custom-select' aria-labelledby='dropdownMenuButton'><option value='"+res[i].Background+"'>"+res[i].Background+" </option></select><div class='form-group'><label for='name'>Level:</label><input type='text' value="+res[i].Level+" class='form-control' id='level'></div></div><div class='text-center'><h4 class='text-danger'>__________Stats__________</h4></div><div class='form-group'><label for='strength'>Strength</label><div class='row'><div class='col-lg-12'><input type='text' id='strength' value="+res[i].Strength+" class='form-control'></div></div></div><div class='form-group'><label for='dexterity'>Dexterity</label><div class='row'><div class='col-lg-12'><input type='text' value="+res[i].Dexterity+" id='dexterity' class='form-control'></div></div></div><div class='form-group'><label for='constitution'>Constitution</label><div class='row'><div class='col-lg-12'><input type='text' value="+res[i].Constitution+" id='constitution' class='form-control'></div></div></div><div class='form-group'><label for='intelligence'>Intelligence</label><div class='row'><div class='col-lg-12'><input type='text' value="+res[i].Intelligence+" id='intelligence' class='form-control'></div></div></div><div class='form-group'><label for='wisdom'>Wisdom</label><div class='row'><div class='col-lg-12'><input type='text' id='wisdom' value="+res[i].Wisdom+" class='form-control'></div></div></div><div class='form-group'><label for='charisma'>Charisma</label><div class='row'><div class='col-lg-12'><input type='text' id='charisma' value="+res[i].Charisma+" class='form-control'></div></div></div></div></div><div class='text-center'><h4 class='text-danger'>_______Additional Stats______</h4></div><div class='form-group'><label for='passive-wisdom'>Passive Wisdom (Perception)</label><input type='text' value="+res[i].passiveWisdom+" class='form-control' id='passivewisdom'></div><div class='form-group'><label for='armor-class'>Armor Class</label><input type='text' value="+res[i].ArmorClass+" class='form-control' id='armorclass'></div><div class='form-group'><label for='initiative'>Initiative</label><input type='text' class='form-control' value="+res[i].Initiative+" id='initiative'></div><div class='form-group'><label for='speed'>Speed</label><input type='text' class='form-control' value="+res[i].Speed+" id='speed'></div><!-- Here we have our final submit button --><div class='row'><div class='col-md-12'><button type='submit' class='btn btn-lg btn-block' id='update'><i class='fas fa-plus-circle'></i> Save</button></div></div> <div class='row'><div class='col-md-12'><button type='delete' class='delete btn btn-lg btn-block btn-danger' id='"+res[i].id+"'><i class='fas fa-plus-circle'></i> Delete</button></div></div></form><!-- <div class='row'><div class='col-md-12'><button type='submit' class='submit btn btn-lg btn-block' id='"+res[i].id+"'><i class='fas fa-plus-circle'></i> Roll 4 d6</button></div></div></div></div><div class='modal-footer'><button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button></div></div></div></div>"
 
 		        );
               
             $('body').append(modal);
           }
         });
+        function deleteCharacter(event) {
+          event.stopPropagation();
+
+          const id = $(this).attr("id");
+          console.log(id);
+          $.ajax({
+            method: "DELETE",
+            url: "/api/character/" + id
+          })
+          location.reload();
+        }
+        function updateCharacter(event) {
+          event.stopPropagation();
+
+          const id = $(this).attr("id");
+          console.log(id);
+          $.ajax({
+            method: "PUT",
+            url: "/api/character/" + id
+          })
+          location.reload();
+        }
+
+       
+
         
+        $(document).on("click", "button.delete", deleteCharacter)
+        $("button").on("click", function(){
+          console.log('cheese')
+        })
+         
+       
 });
