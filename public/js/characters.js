@@ -1,1 +1,1 @@
-// this is for characters page
+// this is to get character information
