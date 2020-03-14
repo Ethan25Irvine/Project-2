@@ -30,52 +30,54 @@ module.exports = function(app) {
         console.log(req);
         db.Character.create({
                 /*                Acrobatics: req.Acrobatics, */
-                Alignment: req.Alignment,
+                Alignment: req.body.Alignment,
                 /*               AnimalHandling: req.AnimalHandling, */
                 /* Arcana: req.Arcana, */
-                ArmorClass: req.ArmorClass,
+                ArmorClass: req.body.ArmorClass,
                 /*             Athletics: req.Athletics, */
-                Background: req.Background,
-                CharacterName: req.CharacterName,
-                Charisma: req.Charisma,
+                Background: req.body.Background,
+                CharacterName: req.body.CharacterName,
+                Charisma: req.body.Charisma,
                 /*                CharismaST: req.CharismaST, */
-                Class: req.Class,
-                Constitution: req.Constitution,
+                Class: req.body.Class,
+                Constitution: req.body.Constitution,
                 /* ConstitutionST: req.ConstitutionST, */
                 /* Deception: req.Deception, */
-                Dexterity: req.Dexterity,
+                Dexterity: req.body.Dexterity,
                 /* DexterityST: req.DexterityST, */
                 /* History: req.History,
                 HP: req.HP,
-                 */
-                Initiative: req.Initiative,
+                */
+                Initiative: req.body.Initiative,
                 /* Insight: req.Insight, */
-                Intelligence: req.Intelligence,
+                Intelligence: req.body.Intelligence,
                 /* IntelligenceST: req.IntelligenceST, */
                 /* Intimidation: req.Intimidation, */
                 /* Investigation: req.Investigation, */
-                Level: req.Level,
+                Level: req.body.Level,
                 /* Medicine: req.Medicine, */
                 /* Nature: req.Nature, */
+                passiveWisdom: req.body.passiveWisdom,
                 /* Perception: req.Perception,
                 Performance: req.Performance,
                 Persuasion: req.Persuasion,
                  */
-                ProficiencyBonus: req.ProficiencyBonus,
-                Race: req.Race,
+                // ProficiencyBonus: req.body.ProficiencyBonus,
+                Race: req.body.Race,
                 /* Religion: req.Religion,
                 SlightOfHand: req.SlightOfHand,
                  */
-                Speed: req.Speed,
+                Speed: req.body.Speed,
                 /* Stealth: req.Stealth, */
-                Strength: req.Strength,
+                Strength: req.body.Strength,
                 /* StrengthST: req.StrengthST, */
                 /* Survival: req.Survival, */
-                Wisdom: req.Wisdom,
+                Wisdom: req.body.Wisdom,
                 /* WisdomST: req.WisdomST */
             }).then(function(dbCharacter) {
                 // We have access to the new Character as an argument inside of the callback function
-                res.json(dbCharacter);
+                // res.json(dbCharacter);
+                console.log(dbCharacter)
             })
             .catch(function(err) {
                 // Whenever a validation or flag fails, an error is thrown

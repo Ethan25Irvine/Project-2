@@ -90,8 +90,7 @@ $(document).ready(function() {
             Performance: "",
             Persuasion: "",
              */
-            ProficiencyBonus: "",
-            Race: "",
+            
             /* Religion: "", */
             /* SlightOfHand: "", */
             Speed: $('#speed')
@@ -107,7 +106,7 @@ $(document).ready(function() {
             Wisdom: $('#wisdom')
                 .val()
                 .trim(),
-            WisdomST: $('#passivewisdom')
+            passiveWisdom: $('#passivewisdom')
                 .val()
                 .trim()
 
@@ -115,18 +114,18 @@ $(document).ready(function() {
         console.log(newPost);
         // If we're updating a post run updatePost to update a post
         // Otherwise run submitPost to create a whole new post
-        if (updating) {
-            newPost.id = postId;
-            updatePost(newPost);
-        } else {
+        // if (updating) {
+        //     newPost.id = postId;
+        //     updatePost(newPost);
+        // } else {
             submitPost(newPost);
-        }
+        // }
     }
 
     // Submits a new post and brings user to blog page upon completion
     function submitPost(post) {
         $.post("/api/character", post, function(results) {
-            console.log(results);
+            // console.log(results);
             // window.location.href = "/index.html";
         });
     }
