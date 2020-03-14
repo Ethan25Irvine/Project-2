@@ -1,8 +1,8 @@
 module.exports = function(sequelize, DataTypes) {
     const Character = sequelize.define("Character", {
-    //    Basic Character Traits
-    // ######################################
-        Name: {
+        //    Basic Character Traits
+        // ######################################
+        CharacterName: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
@@ -34,7 +34,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-            len: [1]
+                len: [1]
             }
         },
         // XP: {
@@ -66,7 +66,7 @@ module.exports = function(sequelize, DataTypes) {
             validate: {
                 len: [1]
             }
-        }, 
+        },
         Constitution: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -268,16 +268,16 @@ module.exports = function(sequelize, DataTypes) {
             defaultValue: false
         },
     });
-  
+
     Character.associate = function(models) {
-      // We're saying that a Post should belong to an Author
-      // A Post can't be created without an Author due to the foreign key constraint
-      Character.belongsTo(models.Creator, {
-        foreignKey: {
-          allowNull: false
-        }
-      });
+        // We're saying that a Post should belong to an Author
+        // A Post can't be created without an Author due to the foreign key constraint
+        Character.belongsTo(models.Creator, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
     };
-  
+
     return Character;
-  };
+};
