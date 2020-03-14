@@ -30,8 +30,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC"
-=======
-  "author": "Yes",
+
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
