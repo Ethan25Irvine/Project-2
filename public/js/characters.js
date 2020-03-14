@@ -9,7 +9,7 @@ $(document).ready(function() {
 		const attributes = $(
 			"<button type='button' class='btn btn-dark btn-lg btn-block modalbtn' data-toggle='modal' data-target='#exampleModalLong'><h4 class='medievalsharp'>Attributes</h4></button>"
 		);
-		const image = $('<img src="../public/images/647002-Fat_Wizard.png" class="card-img-top" alt="">');
+		const image = $('<img src="../images/195144-Dwarf_Paladin.png" class="card-img-top" alt="">');
 		$(cardBody).attr('class', 'card-body');
 		$(cardBody).append(content);
 		$(cardBody).append(attributes);
