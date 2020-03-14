@@ -44,13 +44,13 @@ module.exports = function(sequelize, DataTypes) {
         //         len: [1]
         //     }
         // },
-        // Level: {
-        //     type: DataTypes.INTEGER,
-        //     allowNull: false,
-        //     validate: {
-        //         len: [1]
-        //     }
-        // },
+        Level: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
+        },
         // Character Stats
         // ####################################
         Strength: {
@@ -118,13 +118,13 @@ module.exports = function(sequelize, DataTypes) {
                 len: [1]
             }
         },
-        HP: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
+        // HP: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     validate: {
+        //         len: [1]
+        //     }
+        // },
         // Death Saves
         // ##########################
         // Successes:{
@@ -269,15 +269,15 @@ module.exports = function(sequelize, DataTypes) {
         },
     });
   
-    Character.associate = function(models) {
-      // We're saying that a Post should belong to an Author
-      // A Post can't be created without an Author due to the foreign key constraint
-      Character.belongsTo(models.Creator, {
-        foreignKey: {
-          allowNull: false
-        }
-      });
-    };
+    // Character.associate = function(models) {
+    //   // We're saying that a Post should belong to an Author
+    //   // A Post can't be created without an Author due to the foreign key constraint
+    //   Character.belongsTo(models.Creator, {
+    //     foreignKey: {
+    //       allowNull: true
+    //     }
+    //   });
+    // };
   
     return Character;
   };
