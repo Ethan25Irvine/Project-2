@@ -174,7 +174,14 @@ module.exports = function(sequelize, DataTypes) {
                     allowNull: true,
                     defaultValue: true
                 }, */
-        ProficiencyBonus: {
+        // ProficiencyBonus: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: true,
+        //     validate: {
+        //         len: [1]
+        //     }
+        // },
+        passiveWisdom: {
             type: DataTypes.INTEGER,
             allowNull: true,
             validate: {
