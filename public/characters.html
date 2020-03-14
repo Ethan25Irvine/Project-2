@@ -5,65 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DnD Cards</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=MedievalSharp" />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="images/head-Fat_Wizard.png">
 </head>
 <body id="bodychars">
-    <div class="container containerchars text-center">
-        <div class="row">
-            <div class="nav">
-        </div>
-        <div class="row">
+  <div class="row thenav">
+    
+  <nav class="navbar navbar-expand-lg nav-content">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item navbar-brand">
+          <a class="nav-link " href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item navbar-brand">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item navbar-brand">
+          <a class="nav-link" href="#"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+</div>
+    <div class="container text-center">
+      <div class="containerchars">
+        
+            
+       
             
         <div class="card cardchars">
             <img src="images/647002-Fat_Wizard.png" class="card-img-top" alt="">
             <div class="card-body">
-              <h5 class="card-title text-center">Melvin</h5>
-              <div class="row">
-                  <div class="col-md-4">
-                      <h5>class:</h5>
-                      <div class="row text-center"><h5>wizard</h5></div>
-                  </div>
-                  <div class="col-md-4">
-                      <h5>level:5</h5> 
-                  </div>
-                  <div class="col-md-4">
-                      <h5>race: blind</h5>
-                  </div>
-              </div>
+              <h5 class="card-title text-center medievalsharp">Melvin</h5>
+              
+                  
+              
              <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-    Launch demo modal
+<button type="button" class="btn btn-primary modalbtn" data-toggle="modal" data-target="#exampleModalLong">
+    Stats
   </button>
   
-  
-            </div>
+</div>
+            
         </div>
         <div class="card cardchars">
-            <img src="images/647002-Fat_Wizard.png" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title text-center">Melvin</h5>
-              <div class="row">
-                  <div class="col-md-4">
-                      <h5>class:</h5>
-                      <div class="row text-center"><h5>wizard</h5></div>
-                  </div>
-                  <div class="col-md-4">
-                      <h5>level:5</h5> 
-                  </div>
-                  <div class="col-md-4">
-                      <h5>race: blind</h5>
-                  </div>
-              </div>
-             <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-    Launch demo modal
-  </button>
-  
-  
-            </div>
-        </div>
+          <img src="images/647002-Fat_Wizard.png" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title text-center medievalsharp">Melvin</h5>
+            
+                
+            
+           <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary modalbtn" data-toggle="modal" data-target="#exampleModalLong">
+  Stats
+</button>
+
+</div>
+          
+      </div>
+        
 
         
     </div>
@@ -76,13 +83,135 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <h5 class="modal-title" id="exampleModalLongTitle">Character name</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          ...
+          <div class="row">
+            <div class="col-sm-12">
+              <br>
+              <!-- First card is for handling the search parameters -->
+              <div class="card">
+                <div class="card-header">
+                  <strong>
+                     Character Attributes</strong>
+                </div>
+                <div class="card-body">
+      
+                  <!-- Here we create an HTML Form for handling the inputs-->
+                  <form role="form">
+      
+                    <!-- Here we create the text box for capturing the search term-->
+                    <div class="form-group">
+                      <label for="name">Name:</label>
+                      <input type="text" class="form-control" id="character-name">
+                    </div>
+                    <div class="form-group">
+                      <label for="race">Race</label>
+                      <select id="race" class="custom-select" aria-labelledby="dropdownMenuButton">
+                     <!-- getRace function goes here -->
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="class">Class</label>
+                      <select id="class" class="custom-select" aria-labelledby="dropdownMenuButton">
+                      <!-- getClass function goes here -->
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="alignment">Alignment</label>
+                      <select id="alignment" class="custom-select" aria-labelledby="dropdownMenuButton">
+                      <!-- getAlign function goes here -->
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="background">Background</label>
+                      <select id="background" class="custom-select" aria-labelledby="dropdownMenuButton">
+                      <!-- getBackground function goes here -->
+                      </select>
+                      <div class="form-group">
+                          <label for="name">Level:</label>
+                          <input type="text" class="form-control" id="character-name">
+                        </div>
+                    </div>
+                    <div class="text-center"><h4 class="text-danger">__________Stats__________</h4></div>
+                    
+                    <div class="form-group">
+                      <label for="strength">Strength</label>
+                      
+                            <input type="text" id="strength" class="form-control"> 
+                          </div>
+                          
+                     
+                    <div class="form-group">
+                      <label for="dexterity">Dexterity</label>
+                      
+                            <input type="text" id="dexterity" class="form-control"> 
+                          </div>
+                          
+                      
+                    <div class="form-group">
+                      <label for="constitution">Constitution</label>
+                       
+                            <input type="text" id="constitution" class="form-control"> 
+                          </div>
+                          
+                      
+                    <div class="form-group">
+                      <label for="intelligence">Intelligence</label>
+                      
+                            <input type="text" id="intelligence" class="form-control"> 
+                          </div>
+                          
+                      
+                    <div class="form-group">
+                      <label for="wisdom">Wisdom</label>
+                       
+                            <input type="text" id="wisdom" class="form-control"> 
+                          </div>
+                          
+                      
+                    <div class="form-group">
+                      <label for="charisma">Charisma</label>
+                      <div class="row">
+                          <div class="col-lg-10"> 
+                            <input type="text" id="charisma" class="form-control"> 
+                          </div>
+                          
+                      </div>
+                    </div>
+                    <div class="text-center"><h4 class="text-danger">________Proficiencies_______</h4></div>
+                    <!-- Saving throws -->
+                    <div id="proficiencies" class="form-group">
+                      <div class="text-center">
+                        <div id="prof1"></div>
+                        <div id="prof2"></div>
+                        <div id="prof3"></div>
+                        <div id="prof4"></div>
+      
+                        <!-- checklist goes here -->
+                      </div>
+                    </div>
+        
+                    <div class="text-center"><h4 class="text-danger">______Additional Stats_______</h4></div>
+                    <div class="form-group">
+                      <label for="passive-wisdom">Passive Wisdom (Perception)</label>
+                      <input type="text" class="form-control" id="passive-wisdom">
+                    </div>
+                    <div class="form-group">
+                      <label for="armor-class">Armor Class</label> 
+                      <input type="text" class="form-control" id="armor-class"> 
+                    </div>
+                    <div class="form-group">
+                      <label for="initiative">Initiative</label>
+                      <input type="text" class="form-control" id="initiative">
+                    </div>
+                    <div class="form-group">
+                      <label for="speed">Speed</label>
+                      <input type="text" class="form-control" id="speed">
+                    </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

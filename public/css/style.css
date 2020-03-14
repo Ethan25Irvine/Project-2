@@ -2,21 +2,8 @@
   background-color: #17141b;
   font-family: 'Open Sans', sans-serif;
   color: white;
+  overflow-x: hidden;
 }
-/* .jumbotron {
-    background-color: #C6362A;
-} */
-
-.button{
-    height: 10px;
-}
-
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 75%;
-  }
 
 .modal {
   color: black;
@@ -88,5 +75,32 @@ svg {
   stroke-dashoffset: 100;
   -webkit-transition: 0.6s ease-out;
   transition: 0.6s ease-out;
+}
+
+.modalbtn {
+  margin-top: 20px;
+}
+
+.medievalsharp {
+  font-family: MedievalSharp;
+  font-size: 24px;
+  font-style: normal;
+}
+
+.thenav {
+  margin-bottom: 100px;
+  float: right;
+}
+
+.navbar a {
+  color: white;
+}
+
+.rightalign {
+  text-align: right;
+}
+
+.navbar {
+  float: right;
 }
 /*# sourceMappingURL=style.css.map */
