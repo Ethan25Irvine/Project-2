@@ -209,7 +209,7 @@ $(document).ready(function() {
     function updatePost(post) {
         $.ajax({
                 method: "PUT",
-                url: "/api/characters",
+                url: "/api/character",
                 data: post
             })
             .then(function() {
