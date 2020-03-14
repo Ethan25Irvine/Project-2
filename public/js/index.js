@@ -1,20 +1,22 @@
-$(document).ready(function () {
+$(document).ready(function() {
     getClass();
     getRace();
-    getProf1();
-    getProf2();
-    getProf3();
-    getProf4();
+    /*  getProf1();
+     getProf2();
+     getProf3();
+     getProf4(); */
     getAlign();
     getBackground();
 })
 
-$(".Roll").on("click", function () {
+$(".Roll").on("click", function() {
     event.preventDefault();
 
     const target = $(this).attr("data-target");
     // console.log($(this.id));
-    roll([[4, 6]], target);
+    roll([
+        [4, 6]
+    ], target);
 })
 
 // dice roll functionality
@@ -44,6 +46,7 @@ function roll(dice, target) {
 
 
 const classes = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"];
+
 function getClass() {
     for (let i = 0; i < classes.length; i++) {
         $("#class").append("<option value=" + classes[i] + ">" + classes[i] + "</option>");
@@ -51,6 +54,7 @@ function getClass() {
 };
 
 const races = ["Dragonborn", "Dwarf", "Elf", "Gnome", "Half-ELf", "Half-Orc", "Halfling", "Human", "Tiefling"];
+
 function getRace() {
     for (let i = 0; i < races.length; i++) {
         $("#race").append("<option value=" + races[i] + ">" + races[i] + "</option>");
@@ -76,7 +80,7 @@ const back = [
     "Alcoholic",
     "Alcoholic Scientist",
     "Amnesiac",
-   "Ancient Cultist",
+    "Ancient Cultist",
     "Ancient King",
     "Ancient One",
     "Antiquarian",
@@ -240,7 +244,9 @@ const back = [
     "Slayer",
     "Sleuth",
     "Smuggler, Variant",
-    "Smuggler"];
+    "Smuggler"
+];
+
 function getBackground() {
     for (let i = 0; i < back.length; i++) {
         $("#background").append("<option value=" + back[i] + ">" + back[i] + "</option>");
@@ -254,7 +260,7 @@ const profs2 = ["Acrobatics", "Animal-Handling", "Arcana", "Athletics", "Decepti
 const profs3 = ["Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception"];
 const profs4 = ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"];
 
-function getProf1() {
+/* function getProf1() {
     for (let i = 0; i < profs1.length; i++) {
         $("#prof1").append("<div class='form-check form-check-inline'>" +
             "<input class='form-check-input' type='checkbox' id=" + profs1[i] + " value=" + profs1[i] + ">" +
@@ -288,4 +294,4 @@ function getProf4() {
             "<label class='form-check-label' for=" + profs4[i] + ">" + profs4[i] + "</label>" +
             "</div>");
     };
-}
+} */

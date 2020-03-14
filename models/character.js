@@ -1,283 +1,261 @@
 module.exports = function(sequelize, DataTypes) {
     const Character = sequelize.define("Character", {
-    //    Basic Character Traits
-    // ######################################
-        Name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
-        Class: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
-        Race: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
+        /* Acrobatics: {
+            type: DataTypes.BOOLEAN,
+            allowNull: true,
+            defaultValue: true
+        }, */
         Alignment: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
+            /*     validate: {
+                    len: [1]
+                } */
+        },
+        /*         AnimalHandling: {
+                    type: DataTypes.BOOLEAN,
+                    allowNull: true,
+                    defaultValue: true
+                },
+                Arcana: {
+                    type: DataTypes.BOOLEAN,
+                    allowNull: true,
+                    defaultValue: true
+                }, */
+        ArmorClass: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
             validate: {
                 len: [1]
             }
         },
+        /*        Athletics: {
+                   type: DataTypes.BOOLEAN,
+                   allowNull: true,
+                   defaultValue: true
+               }, */
         Background: {
             type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-            len: [1]
-            }
-        },
-        // XP: {
-        //     type: DataTypes.INTEGER,
-        //     allowNull: false,
-        //     validate: {
-        //         len: [1]
-        //     }
-        // },
-        Level: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: true,
             validate: {
                 len: [1]
             }
         },
-        // Character Stats
-        // ####################################
-        Strength: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
-        Dexterity: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        }, 
-        Constitution: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
-        Intelligence: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
-        Wisdom: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
+        CharacterName: {
+            type: DataTypes.STRING,
+            allowNull: true,
             validate: {
                 len: [1]
             }
         },
         Charisma: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: true,
             validate: {
                 len: [1]
             }
         },
-        // Additional Character Stats
-        // ##############################################
-        ArmorClass: {
+        /*         CharismaST: {
+                    type: DataTypes.BOOLEAN,
+                    allowNull: true,
+                    defaultValue: true
+                }, */
+        Class: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            validate: {
+                len: [1]
+            }
+        },
+        Constitution: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: true,
             validate: {
                 len: [1]
             }
         },
-        ProficiencyBonus: {
+        /*         ConstitutionST: {
+                    type: DataTypes.BOOLEAN,
+                    allowNull: true,
+                    defaultValue: true
+                }, */
+        /*         Deception: {
+                    type: DataTypes.BOOLEAN,
+                    allowNull: true,
+                    defaultValue: true
+                }, */
+        Dexterity: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: true,
             validate: {
                 len: [1]
             }
         },
+        /*         DexterityST: {
+                    type: DataTypes.BOOLEAN,
+                    allowNull: true,
+                    defaultValue: true
+                }, */
+        /*  HP: {
+             type: DataTypes.INTEGER,
+             allowNull: true,
+             validate: {
+                 len: [1]
+             }
+         }, */
+        Intelligence: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+            validate: {
+                len: [1]
+            }
+        },
+        /*        IntelligenceST: {
+                   type: DataTypes.BOOLEAN,
+                   allowNull: true,
+                   defaultValue: true
+               },
+               History: {
+                   type: DataTypes.BOOLEAN,
+                   allowNull: true,
+                   defaultValue: true
+               }, */
+        Initiative: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            validate: {
+                len: [1]
+            }
+        },
+        /*         Insight: {
+                    type: DataTypes.BOOLEAN,
+                    allowNull: true,
+                    defaultValue: true
+                },
+                Intimidation: {
+                    type: DataTypes.BOOLEAN,
+                    allowNull: true,
+                    defaultValue: true
+                }, */
+        /* Investigation: {
+            type: DataTypes.BOOLEAN,
+            allowNull: true,
+            defaultValue: true
+        }, */
+        Level: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+            validate: {
+                len: [1]
+            }
+        },
+        /*         Medicine: {
+                    type: DataTypes.BOOLEAN,
+                    allowNull: true,
+                    defaultValue: true
+                }, */
+        /*         Nature: {
+                    type: DataTypes.BOOLEAN,
+                    allowNull: true,
+                    defaultValue: true
+                },
+                Perception: {
+                    type: DataTypes.BOOLEAN,
+                    allowNull: true,
+                    defaultValue: true
+                }, */
+        /*         Performance: {
+                    type: DataTypes.BOOLEAN,
+                    allowNull: true,
+                    defaultValue: true
+                },
+                Persuasion: {
+                    type: DataTypes.BOOLEAN,
+                    allowNull: true,
+                    defaultValue: true
+                }, */
+        // ProficiencyBonus: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: true,
+        //     validate: {
+        //         len: [1]
+        //     }
+        // },
+        passiveWisdom: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+            validate: {
+                len: [1]
+            }
+        },
+        Race: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            validate: {
+                len: [1]
+            }
+        },
+        /*        Religion: {
+                   type: DataTypes.BOOLEAN,
+                   allowNull: true,
+                   defaultValue: true
+               },
+               SlightOfHand: {
+                   type: DataTypes.BOOLEAN,
+                   allowNull: true,
+                   defaultValue: true
+               }, */
         Speed: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: true,
             validate: {
                 len: [1]
             }
         },
-        // HP: {
-        //     type: DataTypes.INTEGER,
-        //     allowNull: false,
-        //     validate: {
-        //         len: [1]
-        //     }
-        // },
-        // Death Saves
-        // ##########################
-        // Successes:{
-        //     type: DataTypes.INTEGER,
-        //     allowNull: false,
-        //     defaultValue: 0,
-        //     validate: {
-        //         len: [1]
-        //     }
-        // },
-        // Failures:{
-        //     type: DataTypes.INTEGER,
-        //     allowNull: false,
-        //     defaultValue: 0,
-        //     validate: {
-        //         len: [1]
-        //     }
-        // },
-        // Ability Saving Throws
-        // #################################
-        StrengthST: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
+        /*         Stealth: {
+                    type: DataTypes.BOOLEAN,
+                    allowNull: true,
+                    defaultValue: true
+                },
+                StrengthST: {
+                    type: DataTypes.BOOLEAN,
+                    allowNull: true,
+                    defaultValue: true
+                }, */
+        Strength: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+            validate: {
+                len: [1]
+            }
         },
-        DexterityST: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        ConstitutionST: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        IntelligenceST: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        WisdomST: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        CharismaST: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        // Proficiencies 
-        // ################################
-        Acrobatics: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        AnimalHandling: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        Arcana: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        Athletics: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        Deception: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        History: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        Insight: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        Intimidation: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        Investigation: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        Medicine: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        Nature: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        Perception: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        Performance: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        Persuasion: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        Religion: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        SlightOfHand: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        Stealth: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        Survival: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
+        /*         Survival: {
+                    type: DataTypes.BOOLEAN,
+                    allowNull: true,
+                    defaultValue: true
+                }, */
+        Wisdom: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+            validate: {
+                len: [1]
+            }
+        }
+        /*         WisdomST: {
+                    type: DataTypes.BOOLEAN,
+                    allowNull: true,
+                    defaultValue: true
+                } */
     });
-  
-    // Character.associate = function(models) {
-    //   // We're saying that a Post should belong to an Author
-    //   // A Post can't be created without an Author due to the foreign key constraint
-    //   Character.belongsTo(models.Creator, {
-    //     foreignKey: {
-    //       allowNull: true
-    //     }
-    //   });
-    // };
-  
+
+    /*     Character.associate = function(models) {
+            // We're saying that a Post should belong to an Author
+            // A Post can't be created without an Author due to the foreign key constraint
+            Character.belongsTo(models.Creator, {
+                foreignKey: {
+                    allowNull: false
+                }
+            });
+        }; */
     return Character;
-  };
+};
