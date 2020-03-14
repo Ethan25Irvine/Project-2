@@ -1,10 +1,10 @@
 $(document).ready(function() {
     getClass();
     getRace();
-    getProf1();
-    getProf2();
-    getProf3();
-    getProf4();
+    /*  getProf1();
+     getProf2();
+     getProf3();
+     getProf4(); */
     getAlign();
     getBackground();
 })
@@ -260,7 +260,7 @@ const profs2 = ["Acrobatics", "Animal-Handling", "Arcana", "Athletics", "Decepti
 const profs3 = ["Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception"];
 const profs4 = ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"];
 
-function getProf1() {
+/* function getProf1() {
     for (let i = 0; i < profs1.length; i++) {
         $("#prof1").append("<div class='form-check form-check-inline'>" +
             "<input class='form-check-input' type='checkbox' id=" + profs1[i] + " value=" + profs1[i] + ">" +
@@ -294,4 +294,4 @@ function getProf4() {
             "<label class='form-check-label' for=" + profs4[i] + ">" + profs4[i] + "</label>" +
             "</div>");
     };
-}
+} */

@@ -34,55 +34,82 @@ $(document).ready(function() {
          } */
         // Constructing a newPost object to hand to the database
         const newPost = {
-            CharacterName: $('charactername')
+            /*    Acrobatics: "", */
+            Alignment: $('#alignment')
+                .val()
+                .trim(),
+            /* AnimalHandling: "", */
+            /* Arcana: "", */
+            ArmorClass: $('#armorclass')
+                .val()
+                .trim(),
+            /* Athletics: "", */
+            Background: $('#background')
+                .val()
+                .trim(),
+            CharacterName: $('#charactername')
                 .val()
                 .trim(),
             Race: $('#race')
                 .val()
                 .trim(),
+            Charisma: $('#charisma')
+                .val()
+                .trim(),
+            /* CharismaST: "", */
             Class: $('#class')
                 .val()
                 .trim(),
-            Alignment: $('#alignment')
+            Constitution: $('#constitution')
+                .val()
+                .trim(),
+            /* ConstitutionST: "", */
+            /* Deception: "", */
+            Dexterity: $('#dexterity')
+                .val()
+                .trim(),
+            /* DexterityST: "", */
+            /* History: "", */
+            /*   HP: "", */
+            Initiative: $('#initiative')
+                .val()
+                .trim(),
+            /* Insight: "", */
+            Intelligence: $('#intelligence')
+                .val()
+                .trim(),
+            /* IntelligenceST: "",
+            Intimidation: "",
+            Investigation: "",*/
+            Level: $('#level')
+                .val()
+                .trim(),
+            /*Medicine: "",
+            Nature: "",
+            Perception: "",
+            Performance: "",
+            Persuasion: "",
+             */
+            ProficiencyBonus: "",
+            Race: "",
+            /* Religion: "", */
+            /* SlightOfHand: "", */
+            Speed: $('#speed')
+                .val()
+                .trim(),
+            /* Stealth: "", */
+            Strength: $('#strength')
+                .val()
+                .trim(),
+            /* StrengthST: "", */
+            /* Survival: "", */
+            /* WisdomST: "", */
+            Wisdom: $('#wisdom')
+                .val()
+                .trim(),
+            WisdomST: $('#passivewisdom')
                 .val()
                 .trim()
-
-            /*             Background: $('#Background')
-                            .val()
-                            .trim(),
-                        Strength: $('#Strength')
-                            .val()
-                            .trim(),
-                        Dexterity: $('#Dexterity')
-                            .val()
-                            .trim(),
-                        Constitution: $('#Constitution')
-                            .val()
-                            .trim(),
-                        Intelligence: $('#Intelligence')
-                            .val()
-                            .trim(),
-                        Wisdom: $('#Wisdom')
-                            .val()
-                            .trim(),
-                        Charisma: $('#Charisma')
-                            .val()
-                            .trim(),
-                        CharacterName: $('#Character-Name')
-                            .val()
-                            .trim(),
-                        PassiveWisdom: $('#Passive-Wisdom')
-                            .val()
-                            .trim(),
-                        ArmorClass: $('#Armor-Class')
-                            .val()
-                            .trim(),
-                        Initiative: $('#Initiative')
-                            .val()
-                            .trim(),
-                        Speed: $('#Speed')
-                            .val()
-                            .trim() */
 
         };
         console.log(newPost);
@@ -105,7 +132,7 @@ $(document).ready(function() {
     }
 
     // Gets post data for the current post if we're editing, or if we're adding to an author's existing posts
-    function getPostData(id, type) {
+    /*  function getPostData(id, type) {
         let queryUrl;
         switch (type) {
             case "post":
@@ -130,7 +157,7 @@ $(document).ready(function() {
             }
         });
     }
-
+ */
     // A function to get Authors and then render our list of Authors
     /*     function getAuthors() {
             $.get("/api/authors", renderAuthorList);
