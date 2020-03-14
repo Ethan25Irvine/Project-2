@@ -1,27 +1,9 @@
 module.exports = function(sequelize, DataTypes) {
     const Character = sequelize.define("Character", {
-        //    Basic Character Traits
-        // ######################################
-        CharacterName: {
-            type: DataTypes.STRING,
+        Acrobatics: {
+            type: DataTypes.BOOLEAN,
             allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
-        Class: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
-        Race: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
+            defaultValue: false
         },
         Alignment: {
             type: DataTypes.STRING,
@@ -30,6 +12,28 @@ module.exports = function(sequelize, DataTypes) {
                 len: [1]
             }
         },
+        AnimalHandling: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: false
+        },
+        Arcana: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: false
+        },
+        ArmorClass: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
+        },
+        Athletics: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: false
+        },
         Background: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -37,28 +41,48 @@ module.exports = function(sequelize, DataTypes) {
                 len: [1]
             }
         },
-        // XP: {
-        //     type: DataTypes.INTEGER,
-        //     allowNull: false,
-        //     validate: {
-        //         len: [1]
-        //     }
-        // },
-        // Level: {
-        //     type: DataTypes.INTEGER,
-        //     allowNull: false,
-        //     validate: {
-        //         len: [1]
-        //     }
-        // },
-        // Character Stats
-        // ####################################
-        Strength: {
+        CharacterName: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
+        },
+        Charisma: {
             type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 len: [1]
             }
+        },
+        CharismaST: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: false
+        },
+        Class: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
+        },
+        Constitution: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
+        },
+        ConstitutionST: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: false
+        },
+        Deception: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: false
         },
         Dexterity: {
             type: DataTypes.INTEGER,
@@ -67,7 +91,12 @@ module.exports = function(sequelize, DataTypes) {
                 len: [1]
             }
         },
-        Constitution: {
+        DexterityST: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: false
+        },
+        HP: {
             type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
@@ -81,123 +110,7 @@ module.exports = function(sequelize, DataTypes) {
                 len: [1]
             }
         },
-        Wisdom: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
-        Charisma: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
-        // Additional Character Stats
-        // ##############################################
-        ArmorClass: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
-        ProficiencyBonus: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
-        Speed: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
-        HP: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
-        // Death Saves
-        // ##########################
-        // Successes:{
-        //     type: DataTypes.INTEGER,
-        //     allowNull: false,
-        //     defaultValue: 0,
-        //     validate: {
-        //         len: [1]
-        //     }
-        // },
-        // Failures:{
-        //     type: DataTypes.INTEGER,
-        //     allowNull: false,
-        //     defaultValue: 0,
-        //     validate: {
-        //         len: [1]
-        //     }
-        // },
-        // Ability Saving Throws
-        // #################################
-        StrengthST: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        DexterityST: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        ConstitutionST: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
         IntelligenceST: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        WisdomST: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        CharismaST: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        // Proficiencies 
-        // ################################
-        Acrobatics: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        AnimalHandling: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        Arcana: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        Athletics: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
-        },
-        Deception: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
             defaultValue: false
@@ -206,6 +119,13 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.BOOLEAN,
             allowNull: false,
             defaultValue: false
+        },
+        Initiative: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
         },
         Insight: {
             type: DataTypes.BOOLEAN,
@@ -221,6 +141,13 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.BOOLEAN,
             allowNull: false,
             defaultValue: false
+        },
+        Level: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
         },
         Medicine: {
             type: DataTypes.BOOLEAN,
@@ -247,6 +174,20 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false,
             defaultValue: false
         },
+        ProficiencyBonus: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
+        },
+        Race: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
+        },
         Religion: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
@@ -257,16 +198,47 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false,
             defaultValue: false
         },
+        Speed: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
+        },
         Stealth: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
             defaultValue: false
+        },
+        StrengthST: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: false
+        },
+        Strength: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
         },
         Survival: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
             defaultValue: false
         },
+        Wisdom: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
+        },
+        WisdomST: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: false
+        }
     });
 
     Character.associate = function(models) {
@@ -278,6 +250,5 @@ module.exports = function(sequelize, DataTypes) {
             }
         });
     };
-
     return Character;
 };
